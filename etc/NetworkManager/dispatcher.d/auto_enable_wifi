@@ -1,0 +1,17 @@
+#! /bin/bash
+# Enable/disable wlan0 depending on eth0 and wlan0 current state
+
+eth0_status=$(cat /sys/class/net/eth0/operstate)
+wlan0_status=$(cat /sys/class/net/wlan0/operstate)
+
+if [[ "$eth0_status" = "up" ]];
+    then
+        nmcli nm wifi off
+elif [[ "$wlan0_status" = "down" ]] && [[ "$eth0_status" = "down" ]];
+    then
+        nmcli nm wifi on
+else 
+    nmcli nm eth0 on
+    nmcli nm wlan0 off
+
+fi
