@@ -1,0 +1,46 @@
+[user]
+  name = Kamil Backowski
+  email = ...
+[color]
+  ui = true
+  diff = auto
+  status = auto
+  interactive = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[core]
+  editor = vim
+  autocrlf = input
+  mergeoptions = --no-edit
+[alias]
+  st = status
+  ci = commit -av
+  co = checkout
+  spush = dcommit
+  sta = stash
+  br = branch
+  diff = diff -w
+  flog = !sh -c 'git fetch && git log'
+  plog = !sh -c 'git pull --rebase && git log'
+  rpull = pull --rebase
+  who = shortlog -s --
+  prune = fetch --prune
+  undo = reset --soft HEAD^
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+[branch]
+  autosetuprebase = always
+[push]
+  default = simple
+[log]
+  abbrevCommit = true
