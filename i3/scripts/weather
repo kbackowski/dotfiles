@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+curl -s -X GET https://goweather.herokuapp.com/weather/Cracow | jq -r '.temperature'
