@@ -39,6 +39,7 @@ i3wm
 * i3blocks - for i3 bottom bar status
 * compton - for animation effects when switching windows or workplaces
 * xautolock - for locking screen
+* rxvt-unicode - known as urxvt, base terminal
 * rambox - google hangouts client
 * ranger - command line file manager
 * arandr - tool for managing monitors
