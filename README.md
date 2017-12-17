@@ -40,6 +40,7 @@ i3wm
 * compton - for animation effects when switching windows or workplaces
 * xautolock - for locking screen
 * rxvt-unicode - known as urxvt, base terminal
+* j4-dmenu-desktop - quick application launcher, faster then i3 built-in app
 * rambox - google hangouts client
 * ranger - command line file manager
 * arandr - tool for managing monitors
