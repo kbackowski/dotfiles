@@ -30,8 +30,13 @@ sub on_user_command {
     }
 }
 
+# Windows Manager
+
+i3wm
+
 # Tools
 
+* i3blocks - for i3 bottom bar status
 * rambox - google hangouts client
 * ranger - command line file manager
 * arandr - tool for managing monitors
