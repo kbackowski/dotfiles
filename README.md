@@ -42,6 +42,7 @@ i3wm
 * rxvt-unicode - known as urxvt, base terminal
 * j4-dmenu-desktop - quick application launcher, faster then i3 built-in app
 * rambox - google hangouts client
+* fonts-font-awesome - fonts & icons for status bar
 * ranger - command line file manager
 * arandr - tool for managing monitors
 * wicd-curses - command line network manager
