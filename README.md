@@ -37,6 +37,8 @@ i3wm
 # Tools
 
 * i3blocks - for i3 bottom bar status
+* compton - for animation effects when switching windows or workplaces
+* xautolock - for locking screen
 * rambox - google hangouts client
 * ranger - command line file manager
 * arandr - tool for managing monitors
