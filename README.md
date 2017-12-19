@@ -24,3 +24,4 @@ i3wm
 # Other
 
 * bc
+* curl
