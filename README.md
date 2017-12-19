@@ -25,3 +25,4 @@ i3wm
 
 * bc
 * curl
+* jg - for parsing json from command line
