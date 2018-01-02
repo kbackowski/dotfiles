@@ -27,3 +27,11 @@ i3wm
 * curl
 * jg - for parsing json from command line
 * zsg - shell
+
+# Oh my zsh configuration
+
+Add following to ~/.zshrc
+```
+BUNDLED_COMMANDS=(rake rails rspec rubocop sidekiq cap guard)
+plugins=(git bundler)
+```
