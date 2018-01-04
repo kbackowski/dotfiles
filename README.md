@@ -20,13 +20,14 @@ i3wm
 * zathura - for pdf preview
 * feh - for image preview
 * pcmanfm - file manager
+* xbacklight - for controlling screen brightness
 
 # Other
 
 * bc
 * curl
 * jg - for parsing json from command line
-* zsg - shell
+* zsh - shell
 
 # Sublime text
 
