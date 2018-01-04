@@ -28,6 +28,16 @@ i3wm
 * jg - for parsing json from command line
 * zsg - shell
 
+# Sublime text
+
+Installed packages:
+* JSX
+* CJSX Syntax
+* Case Conversion
+* Better CoffeeScript
+* RailsCasts Colour Scheme
+* Theme - Soda
+
 # Oh my zsh configuration
 
 Add following to ~/.zshrc
