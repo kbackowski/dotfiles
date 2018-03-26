@@ -221,9 +221,9 @@ workspace $workspace10 output LVDS-1
 assign [class="Rambox"] $workspace4
 assign [class="Thunderbird"] $workspace4
 
-exec --no-startup-id ~/.config/i3/scripts/random_wallpaper
+exec --no-startup-id feh --bg-scale $HOME/wallpapers/current_wallpaper
 exec_always --no-startup-id xrandr --output LVDS-1 --primary
-exec_always --no-startup-id xrandr --output VGA-1 --noprimary --auto --right-of LVDS-1 && feh --bg-scale $HOME/wallpapers/wallhaven-254489.jpg
+exec_always --no-startup-id xrandr --output HDMI-1 --noprimary --auto --right-of LVDS-1
 exec --no-startup-id rambox
 exec --no-startup-id nm-applet
 exec --no-startup-id compton -f
