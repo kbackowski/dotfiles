@@ -4,6 +4,12 @@ i3wm
 
 # Tools
 
+Install all:
+
+```
+apt install libgconf-2-4 jq bc qalc git sshfs compton xautolock rxvt-unicode tmux rvm j4-dmenu-desktop fonts-font-awesome xbacklight i3blocks curl zsh
+```
+
 * i3blocks - for i3 bottom bar status
 * compton - for animation effects when switching windows or workplaces
 * xautolock - for locking screen
