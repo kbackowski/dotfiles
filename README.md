@@ -52,3 +52,7 @@ Add following to ~/.zshrc
 BUNDLED_COMMANDS=(rake rails rspec rubocop sidekiq cap guard)
 plugins=(git bundler)
 ```
+
+# Other
+
+Configure tap to click on touchpad: https://ubuntuforums.org/showthread.php?t=2375454
