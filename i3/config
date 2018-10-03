@@ -224,6 +224,7 @@ assign [class="Thunderbird"] $workspace4
 exec --no-startup-id feh --bg-scale $HOME/wallpapers/current_wallpaper
 exec_always --no-startup-id xrandr --output LVDS-1 --primary
 exec_always --no-startup-id xrandr --output HDMI-1 --noprimary --auto --right-of LVDS-1
+exec --no-startup-id gnome-session
 exec --no-startup-id rambox
 exec --no-startup-id nm-applet
 exec --no-startup-id compton -f
