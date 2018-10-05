@@ -1,2 +1,2 @@
-#!/usr/bin/env zsh
-echo "pm2.5 $(printf %.0f $(echo "$(curl --compressed -s --header "apikey: $AIRLY_API_KEY" 'https://airapi.airly.eu/v1/sensor/measurements?sensorId=228' | jq -r '.currentMeasurements.pm25')/25 * 100" | bc -l))%"
+#!/usr/bin/env bash
+echo "pm2.5 $(printf "%.0d" $(echo "$(curl --compressed -s --header "apikey: $AIRLY_API_KEY" 'https://airapi.airly.eu/v1/sensor/measurements?sensorId=228' | jq -r '.currentMeasurements.pm25')/25 * 100" | bc -l))%"

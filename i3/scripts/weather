@@ -1,2 +1,2 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 echo "$(curl -s http://api.openweathermap.org/data/2.5/weather\?id\=3094802\&appid\=$OPENWEATHER_API_KEY\&units\=metric | jq -r '.main.temp') °C"
