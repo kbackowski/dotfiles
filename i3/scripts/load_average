@@ -18,7 +18,7 @@ load="$(cut -d ' ' -f1 /proc/loadavg)"
 cpus="$(nproc)"
 
 # full text
-echo "$load"
+echo "LA $load"
 
 # short text
 echo "$load"
