@@ -7,7 +7,7 @@ i3wm
 Install all:
 
 ```
-apt install libgconf-2-4 jq bc qalc git sshfs compton xautolock rxvt-unicode tmux mc j4-dmenu-desktop fonts-font-awesome xbacklight i3blocks curl zsh scrot htop vim libpq-dev nodejs
+apt install libgconf-2-4 jq bc qalc git sshfs compton xautolock rxvt-unicode tmux mc j4-dmenu-desktop fonts-font-awesome xbacklight i3blocks curl zsh scrot htop vim libpq-dev nodejs xclip
 ```
 
 * i3blocks - for i3 bottom bar status
@@ -27,6 +27,7 @@ apt install libgconf-2-4 jq bc qalc git sshfs compton xautolock rxvt-unicode tmu
 * feh - for image preview
 * pcmanfm - file manager
 * xbacklight - for controlling screen brightness
+* xclip - for clipboard to make it work with Visual Studio Code extensions
 
 # Other
 
