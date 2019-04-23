@@ -7,7 +7,7 @@ i3wm
 Install all:
 
 ```
-apt install libgconf-2-4 jq bc qalc git sshfs compton xautolock rxvt-unicode tmux mc j4-dmenu-desktop fonts-font-awesome xbacklight i3blocks curl zsh scrot htop vim libpq-dev nodejs xclip
+apt install libgconf-2-4 jq bc qalc git sshfs compton xautolock rxvt-unicode tmux mc j4-dmenu-desktop fonts-font-awesome xbacklight i3blocks curl zsh scrot htop vim libpq-dev nodejs xclip httpie
 ```
 
 * i3blocks - for i3 bottom bar status
@@ -15,6 +15,7 @@ apt install libgconf-2-4 jq bc qalc git sshfs compton xautolock rxvt-unicode tmu
 * xautolock - for locking screen
 * rxvt-unicode - known as urxvt, base terminal
 * tmux
+* httpie - https://httpie.org command line replacement for curl
 * j4-dmenu-desktop - quick application launcher, faster then i3 built-in app
 * rambox - google hangouts client
 * fonts-font-awesome - fonts & icons for status bar
