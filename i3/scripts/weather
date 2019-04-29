@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+#source ~/.oh-my-zsh/custom/custom.zsh
 echo "$(curl -s http://api.openweathermap.org/data/2.5/weather\?id\=3094802\&appid\=$OPENWEATHER_API_KEY\&units\=metric | jq -r '.main.temp' | xargs printf %.0f) °C"

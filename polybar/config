@@ -20,8 +20,7 @@ my_color15 = #C5C8C6
 
 
 [bar/main_bar]
-;monitor = ${env:MONITOR:HDMI-1}
-monitor = ${env:MONITOR:eDP-1}
+monitor = ${env:MONITOR:LVDS-1}
 bottom = true
 width = 100%
 height = 20
@@ -29,6 +28,7 @@ offset-x = 0%
 offset-y = 0%
 radius = 0.0
 fixed-center = true
+enable-ipc = true
 
 background = ${colors.my_background}
 foreground =  ${colors.my_foreground}
@@ -42,7 +42,7 @@ border-color = ${colors.my_color4}
 padding-left = 0
 padding-right = 0
 
-module-margin-left = 1
+module-margin-left = 0
 module-margin-right = 1
 
 font-0 = Hack:fontformat=truetype:size=9;1
@@ -50,8 +50,8 @@ font-1 = Hack:fontformat=truetype:size=9;1
 font-2 = FontAwesome:fontformat=truetype:size=9;1
 
 modules-left = i3
-modules-center = date
-modules-right = weather pollution volume battery
+modules-center = weather pollution date
+modules-right = battery volume
 
 tray-position = right
 tray-padding = 9
@@ -78,7 +78,11 @@ wm-restack = i3
 [module/i3]
 type = internal/i3
 ;
-;strip-wsnumbers = true
+strip-wsnumbers = true
+ws-icon-0 = 1;♚
+ws-icon-1 = 2;♛
+pin-workspaces = true
+
 ;
 ;label-focused-padding = 3
 ;label-unfocused-padding = 3
@@ -108,7 +112,7 @@ label-mode-background = ${colors.my_color7}
 ;   %index%
 ;   %output%
 ; Default: %icon%  %name%
-label-focused = %index%
+label-focused = %index% %name% 
 ;label-focused-foreground = ${colors.my_foreground}
 label-focused-foreground = ${colors.my_foreground}
 label-focused-background = ${colors.my_background}
@@ -120,7 +124,7 @@ label-focused-padding = 2
 ;   %icon%
 ;   %index%
 ; Default: %icon%  %name%
-label-unfocused = %index%
+label-unfocused = %index% %name%
 label-unfocused-padding = 2
 
 ; Available tokens:
@@ -150,7 +154,7 @@ interval = 5
 date =
 date-alt = "%Y-%m-%d"
 
-time = "%a %b %d, %I:%M %p "
+time = "%a %b %d %H:%M"
 
 time-alt = %H:%M
 
@@ -161,13 +165,13 @@ label = %date% %time%
 
 
 [module/volume]
-type = internal/volume
+type = internal/pulseaudio
 
 ;format-muted-background = ${colors.my_color1}
 ;format-volume-background = ${colors.my_color8}
-format-volume = <ramp-volume> <bar-volume> 
-# label-muted = SOUND MUTED
-label-volume = 
+format-volume = <label-volume> 
+label-muted = 
+label-volume =  %percentage%
 
 
 ; Only applies if <ramp-volume> is used
@@ -184,42 +188,43 @@ bar-volume-foreground-5 = ${colors.my_foreground}
 bar-volume-foreground-6 = ${colors.my_foreground}
 bar-volume-gradient = false
 bar-volume-indicator= |
-bar-volume-indicator-font = 1
+bar-volume-indicator-font = 2
 bar-volume-fill = ─
-bar-volume-fill-font = 1
+bar-volume-fill-font = 2
 bar-volume-empty = ─
-bar-volume-empty-font = 1
+bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.my_color1}
 
 [module/weather]
 type = custom/script
-exec = /home/kamil/.config/i3/scripts/weather
+exec = ~/.config/i3/scripts/weather
 interval = 90
 
 [module/pollution]
 type = custom/script
-exec = /home/kamil/.config/i3/scripts/pollution
+exec = ~/.config/i3/scripts/pollution
 interval = 90
 module-margin-left = 50
 
 [module/battery]
 type = internal/battery
-battery = BAT0
-adapter = AC
-full-at = 99
+battery = BAT1
+adapter = ADP1
+full-at = 97
 
 ;format-full-background = ${colors.my_color4}
 format-full-background = ${colors.my_background}
 format-charging-background = ${colors.my_background}
-format-charging = "⁣  <label-charging> <animation-charging> "
+format-charging = "⁣  <label-charging> "
 format-charging-underline = ${colors.my_color7}
 
 ;format-discharging-background = ${colors.my_color4}
 format-discharging-background = ${colors.my_background}
-format-discharging = "⁣ <label-discharging> <ramp-capacity> "
+format-discharging = "⁣<ramp-capacity> <label-discharging>"
 ;format-discharging-underline = ${self.format-charging-underline}
 
 ;format-full-prefix-foreground = ${colors.my_color4}
+format-full = <ramp-capacity> <label-full>
 format-full-prefix-foreground = ${colors.my_background}
 ;format-full-underline = ${self.format-charging-underline}
 
@@ -281,13 +286,4 @@ margin-bottom = 5
 ;inherit = module/xbacklight
 ;type = internal/backlight
 ;card = intel_backlight
-;
-;[module/cpu]
-;type = internal/cpu
-;interval = 2
-;format-prefix = " "
-;format-prefix-foreground = ${colors.foreground-alt}
-;format-prefix-background = ${colors.foreground-mod}
-;format-underline = #f90000
-;label = %percentage%%
 ;

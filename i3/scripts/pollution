@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+source ~/.oh-my-zsh/custom/custom.zsh
 polution=$(echo "$(curl --compressed -s --header "apikey: $AIRLY_API_KEY" 'https://airapi.airly.eu/v2/measurements/installation?indexType=AIRLY_CAQI&installationId=228' | jq -r '.current.values[] | select(.name == "PM25") | .value')/25 * 100" | bc -l)
 polution=$(echo "$polution/1" | bc)
-echo "pm2.5 $polution%"
+echo "$polution% "
