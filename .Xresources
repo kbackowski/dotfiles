@@ -1,3 +1,5 @@
+#include ".Xresources.variables"
+
 Xcursor.theme: PolarCursorTheme
 Xcursor.size: 6
 Xft.autohint: 0
@@ -7,6 +9,7 @@ Xft.hintstyle: hintslight
 Xft.dpi: 96
 Xft.rgba: rgb
 Xft.lcdfilter: lcddefault
+
 
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
@@ -36,3 +39,4 @@ URxvt*color12:      #81a2be
 URxvt*color13:      #b294bb
 URxvt*color14:      #8abeb7
 URxvt*color15:      #ecebec
+

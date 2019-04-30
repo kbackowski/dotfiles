@@ -1,0 +1,3 @@
+i3wm.primary_monitor: eDP-1
+i3wm.secondary_monitor: HDMI-1
+i3wm.battery_name: BAT0

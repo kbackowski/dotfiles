@@ -102,7 +102,6 @@ set $workspace8 "8:"
 set $workspace9 "9: chat"
 set $workspace10 "0:"
 
-
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
@@ -138,7 +137,6 @@ bindsym $mod+x move workspace to output left
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-
 bindsym $mod+Shift+x exec "$HOME/.config/i3/scripts/lock"
 
 # resize window (you can also use the mouse for that)
@@ -173,11 +171,9 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id sudo light -A 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id sudo light -U 10 # decrease screen brightness
 
-
-# Colors set from ~/.Xresources
 set	$background #1D1F21
 set	$foreground #C5C8C6
 set	$color0 #282A2E
@@ -197,6 +193,9 @@ set	$color14 #8ABEB7
 set	$color7 #707880
 set	$color15 #C5C8C6
 
+set_from_resource $primary_monitor i3wm.primary_monitor
+set_from_resource $secondary_monitor i3wm.secondary_monitor
+
 # class                 border  	backgr. 	text    	indic.  	child_border
 # My colors
 client.background	$background
@@ -206,43 +205,29 @@ client.focused_inactive	$background	$background	$foreground	$background	$backgro
 client.urgent		$background	$background	$foreground	$background	$background
 client.placeholder	$background	$background	$foreground	$background	$background
 
-#bar {
-#  tray_output LVDS-1
-#
-#  status_command /bin/zsh -c "source /home/kamil/.oh-my-zsh/custom/custom.zsh && i3blocks -c $HOME/.config/i3/i3blocks.conf"
-#
-#  colors {
-#    background #282828
-#    statusline #ebdbb2 # main text color
-#    separator #282828 # same as background to make separator invisible
-#  }
-#}
-
-workspace $workspace1 output LVDS-1
-workspace $workspace2 output LVDS-1
-workspace $workspace3 output LVDS-1
-workspace $workspace4 output LVDS-1
-workspace $workspace5 output LVDS-1
-workspace $workspace6 output LVDS-1
-workspace $workspace8 output LVDS-1
-workspace $workspace9 output LVDS-1
-workspace $workspace10 output HDMI-1
+workspace $workspace1 output $primary_monitor
+workspace $workspace2 output $primary_monitor
+workspace $workspace3 output $primary_monitor
+workspace $workspace4 output $primary_monitor
+workspace $workspace5 output $primary_monitor
+workspace $workspace6 output $primary_monitor
+workspace $workspace8 output $primary_monitor
+workspace $workspace9 output $primary_monitor
+workspace $workspace10 output $secondary_monitor
 
 assign [class="Rambox"] $workspace9
 assign [class="Mailspring"] $workspace9
 assign [class="Skype"] $workspace9
 assign [class="Google Chrome"] $workspace1
 
-exec_always --no-startup-id xrandr --output LVDS-1 --primary
-exec_always --no-startup-id xrandr --output HDMI-1 --noprimary --auto --right-of LVDS-1
+exec_always --no-startup-id xrandr --output $primary_monitor --primary
+exec_always --no-startup-id xrandr --output $secondary_monitor --noprimary --auto --right-of eDP-1
+exec --no-startup-id . ~/.oh-my-zsh/custom/custom.zsh && polybar main_bar
 exec --no-startup-id nm-applet
 exec --no-startup-id gnome-session
 exec --no-startup-id compton -f
 exec --no-startup-id xautolock -time 5 -locker '$HOME/.config/i3/scripts/lock'
 exec --no-startup-id urxvt -name urxvt_scratchpad --geometry 130x40 -e tmux
-exec --no-startup-id source ~/.oh-my-zsh/custom/custom.zsh && polybar main_bar
-for_window [instance="urxvt_scratchpad"] floating enable;
-for_window [instance="urxvt_scratchpad"] move scratchpad;
-bindsym $mod+grave		[instance="urxvt_scratchpad"] scratchpad show
-
-
+for_window [instance="urxvt_scratchpad"] floating enable
+for_window [instance="urxvt_scratchpad"] move scratchpad
+bindsym $mod+grave [instance="urxvt_scratchpad"] scratchpad show

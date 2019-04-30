@@ -7,7 +7,7 @@ i3wm
 Install all:
 
 ```
-apt install libgconf-2-4 jq bc qalc git sshfs compton xautolock rxvt-unicode tmux mc j4-dmenu-desktop fonts-font-awesome xbacklight i3blocks curl zsh scrot htop vim libpq-dev nodejs xclip httpie
+apt install libgconf-2-4 jq bc qalc git sshfs compton xautolock rxvt-unicode tmux mc j4-dmenu-desktop fonts-font-awesome i3blocks curl zsh scrot htop vim libpq-dev nodejs xclip httpie
 ```
 
 * i3blocks - for i3 bottom bar status
@@ -28,7 +28,7 @@ apt install libgconf-2-4 jq bc qalc git sshfs compton xautolock rxvt-unicode tmu
 * zathura - for pdf preview
 * feh - for image preview
 * pcmanfm - file manager
-* xbacklight - for controlling screen brightness
+* light - https://github.com/haikarainen/light for controlling screen brightness
 * xclip - for clipboard to make it work with Visual Studio Code extensions
 
 # Polybar installation
@@ -46,15 +46,26 @@ cd polybar && ./build.sh
 * jg - for parsing json from command line
 * zsh - shell
 
-# Sublime text
+# Light configure
 
-Installed packages:
-* JSX
-* CJSX Syntax
-* Case Conversion
-* Better CoffeeScript
-* RailsCasts Colour Scheme
-* Theme - Soda
+Install from deb package https://github.com/haikarainen/light/releases
+
+Next allow to run through sudo without password
+
+```
+sudo visudo
+
+```
+
+And insert
+
+```
+Cmnd_Alias PASSWORDLESS = /usr/bin/light
+
+# and at the bottom
+
+%sudo   ALL=(ALL:ALL) NOPASSWD: PASSWORDLESS
+```
 
 # Oh my zsh configuration
 
