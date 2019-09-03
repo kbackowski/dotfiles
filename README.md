@@ -7,7 +7,7 @@ i3wm
 Install all:
 
 ```
-apt install libgconf-2-4 jq bc qalc git sshfs compton xautolock rxvt-unicode tmux mc j4-dmenu-desktop fonts-font-awesome i3blocks curl zsh scrot htop vim libpq-dev nodejs xclip httpie
+apt install libgconf-2-4 jq bc qalc git sshfs compton xautolock rxvt-unicode tmux mc j4-dmenu-desktop fonts-font-awesome i3blocks curl zsh scrot htop vim libpq-dev nodejs xclip httpie ncdu
 ```
 
 * i3blocks - for i3 bottom bar status
@@ -30,6 +30,7 @@ apt install libgconf-2-4 jq bc qalc git sshfs compton xautolock rxvt-unicode tmu
 * pcmanfm - file manager
 * light - https://github.com/haikarainen/light for controlling screen brightness
 * xclip - for clipboard to make it work with Visual Studio Code extensions
+* ncdu - analyze disk usage from terminal
 
 # Polybar installation
 
