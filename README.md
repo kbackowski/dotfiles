@@ -7,7 +7,7 @@ i3wm
 Install all:
 
 ```
-apt install libgconf-2-4 jq bc qalc git sshfs compton xautolock rxvt-unicode tmux mc j4-dmenu-desktop fonts-font-awesome i3blocks curl zsh scrot htop vim libpq-dev nodejs xclip httpie ncdu
+apt install libgconf-2-4 jq bc qalc git sshfs compton xautolock rxvt-unicode tmux mc j4-dmenu-desktop fonts-font-awesome i3blocks i3lock curl zsh scrot htop vim libpq-dev nodejs xclip httpie ncdu
 ```
 
 * i3blocks - for i3 bottom bar status
