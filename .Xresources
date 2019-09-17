@@ -1,7 +1,6 @@
 #include ".Xresources.variables"
 
 Xcursor.theme: PolarCursorTheme
-Xcursor.size: 6
 Xft.autohint: 0
 Xft.antialias: 1
 Xft.hinting: true
