@@ -16,7 +16,7 @@ URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 URxvt.iso14755: False
 URxvt*termName: rxvt-unicode
 URxvt*scrollBar: false
-URxvt.font: xft:Inconsolata:pixelsize=12
+URxvt.font: xft:Inconsolata:size=12
 
 ! Tommorow night
 URxvt*foreground:   #c5c8c6
