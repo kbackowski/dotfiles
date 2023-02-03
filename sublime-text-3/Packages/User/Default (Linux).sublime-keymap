@@ -1,6 +1,0 @@
-[
-  { "keys": ["ctrl+t"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
-  { "keys": ["end"], "command": "move_to", "args": {"to": "hardeol", "extend": false} },
-  { "keys": ["ctrl+b"], "command": "toggle_side_bar" },
-  { "keys": ["alt+d"], "command": "goto_definition" }
-]
