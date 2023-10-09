@@ -3,6 +3,7 @@
 * https://github.com/sharkdp/bat
 * https://github.com/ogham/exa
 * https://github.com/junegunn/fzf
+* https://github.com/so-fancy/diff-so-fancy
 
 Setup instructions: https://www.youtube.com/watch?v=d4bTkiftBOk
 
