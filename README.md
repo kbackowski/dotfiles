@@ -1,3 +1,11 @@
+# Command line
+
+* https://github.com/sharkdp/bat
+* https://github.com/ogham/exa
+* https://github.com/junegunn/fzf
+
+Setup instructions: https://www.youtube.com/watch?v=d4bTkiftBOk
+
 # Windows Manager
 
 i3wm
